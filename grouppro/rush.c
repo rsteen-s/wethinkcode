@@ -3,43 +3,53 @@
 
 void rush(int x, int y)
 {
-	x = x - 2;
-	printf("o");
+	int x2;
+	int x3;
+	int x0;
 
-	while(x>0)
+	x0=x;
+	x0 = x0 - 2;
+
+	write(1,"o",1);
+	
+	while(x0>0)
 	{
-		printf("-");
-		x--;
+		write(1,"-",1);
+		x0--;
 
 	}
-	printf("o\n");
-	x = x + 3;
+	write(1,"o\n",2);
+	
 	y = y - 2;
 	while(y>0)
 	{
-		printf("|");
-			while(x>0)
+		write(1,"|",1);
+		x2=x;
+		x2=x2-2;
+			while(x2>0)
 			{ 
-				printf(" ");
-				x--;
+				write(1," ",1);
+				x2--;
 			}
-		x = x + 3;
-		printf("|\n");
+		
+		write(1,"|\n",2);
 		y--;
 	}
 
-	printf("o");
-
-	while(x>0)
+	write(1,"o",1);
+	x3=x;
+	x3=x3-2;
+	while(x3>0)
 	{
-		printf("-");
-		x--;
+		write(1,"-",1);
+		x3--;
 	}
-	printf("o\n");
+	write(1,"o\n",2);
+
 }
 
 int main()
 {
-	rush(5,5);
+	rush(6,8);
 	return 0;
 }
